@@ -1,0 +1,48 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="StriderLauncher.App"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             xmlns:local="clr-namespace:StriderLauncher"
+             
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator></local:ViewLocator>
+    </Application.DataTemplates>
+         
+             
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="Styles/AppDefaultStyles.axaml"></StyleInclude>
+    </Application.Styles>
+             
+             
+    <Application.Resources>
+        
+        <!--Url Dictionary-->
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude Source="/Assets/UrlDictionary.axaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
+        
+        <!--Dark Mode Colours-->
+        <SolidColorBrush x:Key="PrimaryBackground">#202022</SolidColorBrush>
+        <SolidColorBrush x:Key="SidebarBackground">#1D1E26</SolidColorBrush>
+        <SolidColorBrush x:Key="BorderColor">#363740</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryActiveBackground">#363740</SolidColorBrush>
+        <SolidColorBrush x:Key="SidebarForegroundDark">#FC365B</SolidColorBrush>
+        <SolidColorBrush x:Key="DefaultFontDark">WhiteSmoke</SolidColorBrush>
+        
+        
+        <FontFamily x:Key="LexendLight">Assets\Fonts\Lexend-Light.ttf#Lexend Light</FontFamily>
+        <FontFamily x:Key="LexendThin">Assets\Fonts\Lexend-Thin.ttf#Lexend Thin</FontFamily>
+        <FontFamily x:Key="LexendMedium">Assets\Fonts\Lexend-Medium.ttf#Lexend Medium</FontFamily>
+        <FontFamily x:Key="IconFont"> Assets/Fonts/Phosphor.ttf#Phosphor</FontFamily>
+        <FontFamily x:Key="StrideIcon"> Assets/Fonts/StrideIcons.ttf#StrideIcons</FontFamily>
+        
+    </Application.Resources>
+             
+</Application>

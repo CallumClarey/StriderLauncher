@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.3.11" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.3.11" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.11" />
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.11" />
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Include="Avalonia.Diagnostics" Version="11.3.11">
+            <IncludeAssets Condition="'$(Configuration)' != 'Debug'">none</IncludeAssets>
+            <PrivateAssets Condition="'$(Configuration)' != 'Debug'">all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.2" />
+        <PackageReference Include="Svg.Controls.Avalonia" Version="11.3.9.2" />
+        <PackageReference Include="Svg.Skia" Version="3.4.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\Images\Home Icon.svg" />
+      <None Remove="Assets\Images\ProjectIcon.svg" />
+      <None Remove="Assets\Images\Stride Logo.svg" />
+      <None Remove="Assets\Images\HomeIcon.svg" />
+      <None Remove="Assets\Images\StrideLogo.svg" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaResource Include="Assets\Images\StrideLogo.svg" />
+      <None Remove="Assets\Fonts\Lexend-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Lexend-Light.ttf" />
+      <None Remove="Assets\Fonts\Lexend-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Lexend-Thin.ttf" />
+      <None Remove="Assets\Fonts\Lexend-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Lexend-Medium.ttf" />
+      <None Remove="Assets\Fonts\icomoon.ttf" />
+      <None Remove="Assets\Fonts\Phosphor.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Phosphor.ttf" />
+      <None Remove="Assets\Fonts\strideiconpack.ttf" />
+      <None Remove="Assets\Fonts\StrideIcons.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\StrideIcons.ttf" />
+      <EmbeddedResource Remove="Assets\UrlResoruces.resx" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaResource Include="Assets\Images\ProjectIcon.svg" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaResource Include="Assets\Images\HomeIcon.svg" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Views\MainView.axaml.cs">
+        <DependentUpon>MainView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+</Project>

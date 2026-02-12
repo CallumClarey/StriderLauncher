@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="StriderLauncher/App.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Assets/UrlDictionary.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/MainWindow.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Styles/AppDefault.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Styles/AppDefaultStyles.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Views/DashboardView.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Views/MainView.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Views/ProjectView.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

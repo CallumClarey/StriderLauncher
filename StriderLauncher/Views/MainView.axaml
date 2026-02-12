@@ -1,0 +1,105 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
+        Width="1024" Height="600"
+        x:Class="StriderLauncher.MainView"
+        xmlns:vm="clr-namespace:StriderLauncher.ViewModels"
+        x:DataType="vm:MainViewModel"
+        Background="{DynamicResource SidebarBackground}"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="40"
+        ExtendClientAreaToDecorationsHint="True"
+        Padding="{Binding OffScreenMargin, RelativeSource={RelativeSource Self}}"
+        Title="Stride Hub">
+        
+    
+    <Design.DataContext><vm:MainViewModel></vm:MainViewModel></Design.DataContext>
+    
+    
+    <Grid RowDefinitions="35,*">
+        
+        <!-- This Section is for the custom window bar -->
+            <Border BorderBrush="{DynamicResource BorderColor }" BorderThickness="0,0,0,2">
+                
+                <Grid ColumnDefinitions ="*, Auto" Row="0" Background="{DynamicResource SidebarBackground}" 
+                      PointerPressed="Titlebar_OnPointerPressed" >
+                    
+                    
+                    <Menu Grid.Column="1" FontFamily="{DynamicResource IconFont}">
+                        <MenuItem Header="&#xE4E0;" ToolTip.Tip="Report an issue" 
+                                  Command="{Binding OpenLinkCommand}"
+                                  CommandParameter="{DynamicResource ReportUrl}">
+                        </MenuItem>
+                        <MenuItem Header="&#xE31A;" ToolTip.Tip="Roadmap" 
+                                  Command="{Binding OpenLinkCommand}"
+                                  CommandParameter="{DynamicResource RoadMapUrl}">
+                        </MenuItem>
+                        
+                        <MenuItem Header="&#xE8F2;" ToolTip.Tip="Documentation" 
+                                  Command="{Binding OpenLinkCommand}"
+                                  CommandParameter="{DynamicResource DocumentationUrl}">
+                            
+                        </MenuItem>
+                        <MenuItem Header="&#xE61A;" ToolTip.Tip="Chat On Discord"
+                                  Command="{Binding OpenLinkCommand}"
+                                  CommandParameter="{DynamicResource DiscordUrl}">
+                        </MenuItem>
+                        <MenuItem Header="&#xe576;" ToolTip.Tip="Github" 
+                                  Command="{Binding OpenLinkCommand}"
+                                  CommandParameter="{DynamicResource GitHubUrl}">
+                        </MenuItem>
+                        <MenuItem Header="&#xE59C;" ToolTip.Tip="Chat on Reddit" 
+                                  Command="{Binding OpenLinkCommand}"
+                                  CommandParameter="{DynamicResource RedditUrl}">
+                        </MenuItem>
+                        
+                        <!--Window nav buttons-->
+                        <Separator Width="1" Height="20" Margin="5,0" Background="Gray"/>
+                        <MenuItem Header="—" Click="Minimize_OnClick"></MenuItem>
+                        <MenuItem x:Name="MaxBtn" Header= "□" Click="Maximumise_OnClick"></MenuItem>
+                        <MenuItem Classes="CloseItem" Header="X" Click="OnClosed_OnClick" Margin="2,0"></MenuItem>
+                    </Menu>
+                
+                </Grid>
+            </Border>
+         
+            
+            
+            <!-- This Section is for the main page and the sidebar  -->
+            <Grid Background = "{DynamicResource PrimaryBackground}" ColumnDefinitions="80,*" Row="1">
+                
+                <ContentControl Grid.Column="1" Content="{Binding CurrentPage}" Margin="10"/>
+                
+                <!--Side Bar-->
+                <Border Grid.Column="0" 
+                    Padding="0,8" 
+                    Background="{DynamicResource SidebarBackground}" 
+                    BorderBrush="{DynamicResource BorderColor}" 
+                    BorderThickness="0,0,3,0">
+                    
+                    
+                    <Grid RowDefinitions="*, Auto">
+                        <StackPanel Spacing="0,1">
+                            
+                            <Button Classes="Sidebar" Tag ="HomeButton" Command="{Binding GoToDashboardCommand}">
+                                <Label FontFamily="{DynamicResource StrideIcon}" Content="&#xE900;" FontSize="40"></Label>
+                            </Button>
+                            <Button Classes="Sidebar" Tag= "ProjectButton" Command="{Binding GoToProjectCommand}">
+                                <Label Content="&#xE260;" FontSize="35"></Label>
+                            </Button>
+                            <Button Classes="Sidebar" Tag= "Downloads" Command="{Binding GoToProjectCommand}">
+                                <Label Content="&#xE20A;" FontSize="35"></Label>
+                            </Button>
+                        </StackPanel>
+                        
+                        <Button Grid.Row="1" Classes="Sidebar" Content="&#xE270;" FontSize="20" HorizontalAlignment="Center"></Button>
+                    </Grid>
+                </Border> 
+            </Grid>
+            
+            
+            
+    </Grid>
+</Window>

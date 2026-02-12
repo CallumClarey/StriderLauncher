@@ -1,0 +1,78 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+            <Button Classes="IconOnly" Content="Hello"></Button>
+            
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+    <!-- The icon only button mainly for the sidebar-->
+    <Style Selector="Button.IconOnly">
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="Foreground" Value="Transparent"></Setter>
+        <Setter Property="Padding" Value="12"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+    </Style>
+    
+    <Style Selector="Button.IconOnly Image">
+        <Setter Property="RenderTransform" Value="scale(1)"></Setter>
+        <Setter Property="Transitions">
+            <Transitions>
+                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1"></TransformOperationsTransition>
+            </Transitions>
+        </Setter>
+    </Style>
+    
+    <Style Selector="Button.IconOnly:pointerover Image">
+        <Setter Property="RenderTransform" Value="scale(1.1)"></Setter>
+    </Style>
+    
+    <Style Selector="Button.IconOnly:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="Transparent"></Setter>
+    </Style>
+    
+    
+    <!--The font version-->
+    <Style Selector="Button.Sidebar">
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource SidebarForegroundDark}"></Setter>
+        <Setter Property="Padding" Value="12"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource IconFont}"></Setter>
+    </Style>
+    
+    <Style Selector="Button.Sidebar">
+        <Setter Property="RenderTransform" Value="scale(1)"></Setter>
+        <Setter Property="Transitions">
+            <Transitions>
+                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1"></TransformOperationsTransition>
+            </Transitions>
+        </Setter>
+    </Style>
+    
+    <Style Selector="Button.Sidebar:pointerover">
+        <Setter Property="RenderTransform" Value="scale(1.15)"></Setter>
+    </Style>
+    
+    <Style Selector="Button.Sidebar:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource SidebarForegroundDark}"></Setter>
+    </Style>
+    
+    
+    <!--The Menu Button to close-->
+    <Style Selector="MenuItem.CloseItem:pointerover /template/ Border#PART_LayoutRoot">
+        <Setter Property="Background" Value="Red"/>
+    </Style>
+    
+    <Style Selector="ToolTip">
+        <Setter Property="Foreground" Value="{DynamicResource DefaultFontDark }"></Setter>
+        <Setter Property="Background" Value="{DynamicResource PrimaryBackground}"></Setter>
+    </Style>
+    
+    
+    
+</Styles>
