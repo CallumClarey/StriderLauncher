@@ -77,3 +77,4 @@ C:\Users\Callu\Documents\StriderLauncher\StriderLauncher\bin\Release\net9.0\Svg.
 C:\Users\Callu\Documents\StriderLauncher\StriderLauncher\bin\Release\net9.0\CommunityToolkit.Mvvm.dll
 C:\Users\Callu\Documents\StriderLauncher\StriderLauncher\bin\Release\net9.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Callu\Documents\StriderLauncher\StriderLauncher\bin\Release\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Callu\Documents\StriderLauncher\StriderLauncher\obj\Release\net9.0\StriderLauncher.sourcelink.json

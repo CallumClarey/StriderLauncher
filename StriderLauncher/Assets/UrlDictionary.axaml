@@ -3,13 +3,10 @@
                     xmlns:sys="clr-namespace:System;assembly=netstandard">
 
     
-        <!--Latest Engine Version-->
-        <sys:String x:Key="LatestVersion">4.3</sys:String>
-        
         <!--URLS-->
           <sys:String x:Key="ReportUrl">https://github.com/stride3d/stride/issues/</sys:String>
             <!--This will require injecting based on the newest version {0} e.g 4.0-->
-          <sys:String x:Key="DocumentationUrl">https://doc.stride3d.net/4.3</sys:String>
+          <sys:String x:Key="DocumentationUrl">https://doc.stride3d.net/{0}</sys:String>
           <sys:String x:Key="DiscordUrl">https://discord.gg/f6aerfE</sys:String>
           <sys:String x:Key="RedditUrl">https://www.reddit.com/r/stride3d</sys:String>
           <sys:String x:Key="GitHubUrl">https://github.com/stride3d/stride/</sys:String>

@@ -10,6 +10,10 @@
 
     <!-- Add Styles Here -->
     <!-- The icon only button mainly for the sidebar-->
+    <Style Selector="Label.Icon">
+        <Setter Property="FontFamily" Value="{DynamicResource IconFont}"></Setter>
+    </Style>
+    
     <Style Selector="Button.IconOnly">
         <Setter Property="Background" Value="Transparent"></Setter>
         <Setter Property="Foreground" Value="Transparent"></Setter>
@@ -62,6 +66,15 @@
         <Setter Property="Foreground" Value="{DynamicResource SidebarForegroundDark}"></Setter>
     </Style>
     
+    <!--Font only icon-->
+    <Style Selector="Button.BasicIcon">
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource PageForeground}"></Setter>
+        <Setter Property="Padding" Value="12"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource IconFont}"></Setter>
+    </Style>
+    
     
     <!--The Menu Button to close-->
     <Style Selector="MenuItem.CloseItem:pointerover /template/ Border#PART_LayoutRoot">
@@ -74,5 +87,59 @@
     </Style>
     
     
+    
+    <!--Dashboard styles-->
+   
+    
+    
+    <Style Selector="TextBlock.Title">
+        <Setter Property="LetterSpacing" Value="3"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontMedium}"></Setter>
+        <Setter Property="FontSize" Value="42"></Setter>
+        <Setter Property="FontWeight" Value="Light"></Setter>
+        <Setter Property="FontStyle" Value="Italic"></Setter>
+    </Style>
+    
+    <Style Selector="TextBlock.Subheading">
+        <Setter Property="LetterSpacing" Value="2"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontThin}"></Setter>
+        <Setter Property="FontSize" Value="15"></Setter>
+        <Setter Property="FontStyle" Value="Italic"></Setter>
+        <Setter Property="Margin" Value="5,0,5,5"></Setter>
+    </Style>
+    
+    <Style Selector="TextBlock.H1">
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontLight}"></Setter>
+        <Setter Property="FontSize" Value="24"></Setter>
+        <Setter Property="Padding" Value="22,0,0,0"></Setter>
+    </Style>
+    
+    <Style Selector="Separator">
+        <Setter Property="Background" Value="{DynamicResource PageForeground}"></Setter>
+        <Setter Property="Margin" Value="10,10,10,10"></Setter>
+    </Style>
+    
+    <Style Selector="TabStripItem.DashboardItem">
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontLight}"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="BorderBrush" Value="{DynamicResource PageForeground}"/>
+        <Setter Property="BorderThickness" Value="1"></Setter>
+        <Setter Property="CornerRadius" Value="3"></Setter>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource PageForeground}"></Setter>
+        <Setter Property="MinHeight" Value="30"></Setter>
+        <Setter Property="MinWidth" Value="80"></Setter>
+        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+    </Style>
+    
+    <Style Selector="TabStripItem.DashboardItem:selected">
+        <Setter Property="Background" Value="{DynamicResource PageForeground}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBackground}"></Setter>
+    </Style>
+    
+    <Style Selector="TabStripItem.DashboardItem:pointerover /template/ Border#PART_LayoutRoot">
+        <Setter Property="Background" Value="{DynamicResource PageButtonHover}"></Setter>
+        <Setter Property="BorderBrush" Value="{DynamicResource PageButtonHover}"></Setter>
+    </Style>
     
 </Styles>

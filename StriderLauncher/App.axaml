@@ -3,7 +3,6 @@
              x:Class="StriderLauncher.App"
              xmlns:sys="clr-namespace:System;assembly=netstandard"
              xmlns:local="clr-namespace:StriderLauncher"
-             
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
@@ -24,9 +23,11 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceInclude Source="/Assets/UrlDictionary.axaml"/>
+                <ResourceInclude Source="/Controls/IconButton.axaml"></ResourceInclude>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
         
+        <x:String x:Key="Version">4.3</x:String>
         
         <!--Dark Mode Colours-->
         <SolidColorBrush x:Key="PrimaryBackground">#202022</SolidColorBrush>
@@ -36,13 +37,18 @@
         <SolidColorBrush x:Key="SidebarForegroundDark">#FC365B</SolidColorBrush>
         <SolidColorBrush x:Key="DefaultFontDark">WhiteSmoke</SolidColorBrush>
         
+        <!--Pages colour scheme dark-->
+        <SolidColorBrush x:Key="PageForeground">White</SolidColorBrush>
+        <SolidColorBrush x:Key="PageButtonBoarder">#303138</SolidColorBrush>
+        <SolidColorBrush x:Key="PageButtonHover">#FC365B</SolidColorBrush>
         
-        <FontFamily x:Key="LexendLight">Assets\Fonts\Lexend-Light.ttf#Lexend Light</FontFamily>
-        <FontFamily x:Key="LexendThin">Assets\Fonts\Lexend-Thin.ttf#Lexend Thin</FontFamily>
-        <FontFamily x:Key="LexendMedium">Assets\Fonts\Lexend-Medium.ttf#Lexend Medium</FontFamily>
+        
+        <FontFamily x:Key="DefaultFontRegular">Assets/Fonts/Tomorrow-Regular.ttf#Tomorrow</FontFamily>
+        <FontFamily x:Key="DefaultFontThin">Assets/Fonts/Tomorrow-Thin.ttf#Tomorrow Thin</FontFamily>
+        <FontFamily x:Key="DefaultFontMedium">Assets/Fonts/Tomorrow-Medium.ttf#Tomorrow Medium</FontFamily>
+        <FontFamily x:Key="DefaultFontLight">Assets/Fonts/Tomorrow-Light.ttf#Tomorrow Light</FontFamily>
         <FontFamily x:Key="IconFont"> Assets/Fonts/Phosphor.ttf#Phosphor</FontFamily>
         <FontFamily x:Key="StrideIcon"> Assets/Fonts/StrideIcons.ttf#StrideIcons</FontFamily>
         
     </Application.Resources>
-             
 </Application>

@@ -5,6 +5,7 @@
       <map>
         <entry key="StriderLauncher/App.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Assets/UrlDictionary.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Controls/IconButton.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/MainWindow.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Styles/AppDefault.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Styles/AppDefaultStyles.axaml" value="StriderLauncher/StriderLauncher.csproj" />

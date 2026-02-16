@@ -39,8 +39,8 @@
                         
                         <MenuItem Header="&#xE8F2;" ToolTip.Tip="Documentation" 
                                   Command="{Binding OpenLinkCommand}"
-                                  CommandParameter="{DynamicResource DocumentationUrl}">
-                            
+                                  CommandParameter="{Binding DocumentationUrl}">
+                           
                         </MenuItem>
                         <MenuItem Header="&#xE61A;" ToolTip.Tip="Chat On Discord"
                                   Command="{Binding OpenLinkCommand}"
@@ -89,7 +89,7 @@
                             <Button Classes="Sidebar" Tag= "ProjectButton" Command="{Binding GoToProjectCommand}">
                                 <Label Content="&#xE260;" FontSize="35"></Label>
                             </Button>
-                            <Button Classes="Sidebar" Tag= "Downloads" Command="{Binding GoToProjectCommand}">
+                            <Button Classes="Sidebar" Tag= "Installs" Command="{Binding GoToProjectCommand}">
                                 <Label Content="&#xE20A;" FontSize="35"></Label>
                             </Button>
                         </StackPanel>
@@ -98,8 +98,5 @@
                     </Grid>
                 </Border> 
             </Grid>
-            
-            
-            
     </Grid>
 </Window>

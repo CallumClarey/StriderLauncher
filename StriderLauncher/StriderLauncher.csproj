@@ -35,11 +35,8 @@
     <ItemGroup>
       <AvaloniaResource Include="Assets\Images\StrideLogo.svg" />
       <None Remove="Assets\Fonts\Lexend-Light.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Lexend-Light.ttf" />
       <None Remove="Assets\Fonts\Lexend-Thin.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Lexend-Thin.ttf" />
       <None Remove="Assets\Fonts\Lexend-Medium.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\Lexend-Medium.ttf" />
       <None Remove="Assets\Fonts\icomoon.ttf" />
       <None Remove="Assets\Fonts\Phosphor.ttf" />
       <AvaloniaResource Include="Assets\Fonts\Phosphor.ttf" />
@@ -47,6 +44,16 @@
       <None Remove="Assets\Fonts\StrideIcons.ttf" />
       <AvaloniaResource Include="Assets\Fonts\StrideIcons.ttf" />
       <EmbeddedResource Remove="Assets\UrlResoruces.resx" />
+      <None Remove="Assets\Fonts\Tomorrow-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Tomorrow-Regular.ttf" />
+      <None Remove="Assets\Fonts\Tomorrow-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Tomorrow-Bold.ttf" />
+      <None Remove="Assets\Fonts\Tomorrow-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Tomorrow-Medium.ttf" />
+      <None Remove="Assets\Fonts\Tomorrow-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Tomorrow-Thin.ttf" />
+      <None Remove="Assets\Fonts\Tomorrow-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Tomorrow-Light.ttf" />
     </ItemGroup>
 
     <ItemGroup>

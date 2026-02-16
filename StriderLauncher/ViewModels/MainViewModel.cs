@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using Avalonia;
+using Avalonia.Styling;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using StriderLauncher.Data;
 using StriderLauncher.Factory;
@@ -15,9 +17,25 @@ public partial class MainViewModel: ViewModelBase
     private readonly PageFactory pageFactory;
 
     /// <summary>
+    /// Uses a special method to combine the url to latest release version
+    /// </summary>
+    public string DocumentationUrl
+    {
+        get
+        {
+            Application.Current!.TryGetResource("DocumentationUrl", ThemeVariant.Default, out var url);
+            Application.Current.TryGetResource("Version", ThemeVariant.Default, out var version);
+            return string.Format((string)url!, (string)version!) ?? string.Empty;
+        }
+    }
+
+
+    /// <summary>
     /// Design time constructor 
     /// </summary>
+#pragma warning disable CS8618, CS9264
     public MainViewModel()
+#pragma warning restore CS8618, CS9264
     {
         currentPage = new DashboardViewModel();
     }
@@ -37,5 +55,5 @@ public partial class MainViewModel: ViewModelBase
 
     [RelayCommand]
     private void OpenLink(string urlTarget) => UrlOpener.OpenUrl(urlTarget);
-
+    
 }

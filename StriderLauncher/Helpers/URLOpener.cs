@@ -9,6 +9,15 @@ public static class UrlOpener
     public static bool HadUrlError { get; private set; } = false;
     //this will be displayed to the UI later 
     public static string ErrorMessage { get; private set; } = string.Empty;
+
+    
+    /// <summary>
+    /// Url for inserting 
+    /// </summary>
+    /// <param name="url"></param>
+    /// <param name="versionNumber"></param>
+    public static void OpenUrl(string url, string versionNumber) => OpenUrl(url.Replace("{0}", versionNumber));
+
     
     /// <summary>
     /// Takes the Url as an input then returns either true if opened false if not

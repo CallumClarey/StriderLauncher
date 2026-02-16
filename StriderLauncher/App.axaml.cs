@@ -3,12 +3,19 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Input;
 using Avalonia.Markup.Xaml;
+using Avalonia.Metadata;
 using Microsoft.Extensions.DependencyInjection;
 using StriderLauncher.ViewModels;
 using FxResources.Microsoft.Extensions.DependencyInjection;
 using StriderLauncher.Data;
 using StriderLauncher.Factory;
 using StriderLauncher.ViewModels.Bases;
+
+
+
+[assembly: XmlnsDefinition("https://github.com/avaloniaui","StriderLauncher.Controls")]
+
+
 
 namespace StriderLauncher;
 
