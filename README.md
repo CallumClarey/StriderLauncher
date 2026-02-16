@@ -6,7 +6,7 @@ The project tries to create a new launcher using Avalonia to enable cross platfo
 I have implemented basic dependency injection for each page within the launcher; the goal is to provide every function the previous launcher did and more. 
 It’s currently in very active development and most features remain unfinished but here is a screenshot of the improved dashboard for insight into the project.
 
-The Old launcher/ Front DashPage 
+The Old launcher/ New Front Dashpage 
 
 <img width="260" height="196" alt="OldDash" src="https://github.com/user-attachments/assets/b41dfc3c-293f-4118-9208-62769c92fb89" />   
 <img width="335" height="194" alt="newDash" src="https://github.com/user-attachments/assets/3fc75fac-ab58-43a7-a6db-6ed1837e6793" />
