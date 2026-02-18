@@ -37,7 +37,19 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/Callu/Documents/StriderLauncher/StriderLauncher/Controls/IconButton.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Callu/Documents/StriderLauncher/StriderLauncher/Controls/NewsListItem.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Callu/Documents/StriderLauncher/StriderLauncher/Controls/RecentProjectsWidget.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Callu/Documents/StriderLauncher/StriderLauncher/Styles/AppDefaultStyles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Callu/Documents/StriderLauncher/StriderLauncher/Styles/SidebarWindowStyling.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Callu/Documents/StriderLauncher/StriderLauncher/Styles/TextStyles.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/Callu/Documents/StriderLauncher/StriderLauncher/Views/DashboardView.axaml]

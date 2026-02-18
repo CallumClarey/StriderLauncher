@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StriderLauncher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90d22dc4be470212462e4189ee2e0ee2da0e2c6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0edf90745dd7eb4536cebb8b69a13b1beb01870")]
 [assembly: System.Reflection.AssemblyProductAttribute("StriderLauncher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StriderLauncher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,22 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:StriderLauncher.TemplatedControls">
+        
+    <Design.PreviewWith>
+        <controls:NewsListItem/>
+    </Design.PreviewWith>
+
+    <Style Selector="controls|NewsListItem">
+        <!-- Set Defaults -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <ListBoxItem HorizontalContentAlignment="Stretch" Classes="Dashlist" MinHeight="110">
+                    <StackPanel Margin="0,0,0,15" Spacing="5">
+                        <TextBlock Classes="H1" Foreground="Black" Text="{TemplateBinding Title}"/>
+                        <TextBlock Classes="Subheading" Foreground="Black" Text="{TemplateBinding DateReleased}"/>
+                    </StackPanel>
+                </ListBoxItem>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

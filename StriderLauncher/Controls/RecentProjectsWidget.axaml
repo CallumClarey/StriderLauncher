@@ -1,0 +1,29 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:StriderLauncher.Controls">
+    <Design.PreviewWith>
+        <controls:RecentProjectsWidget />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|RecentProjectsWidget">
+        <!-- Set Defaults -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Button Classes="ProjectWidget" Width="350" MinHeight="220" MaxHeight="800">
+                    <Grid RowDefinitions="auto,*,auto,Auto">
+                        <TextBlock Classes="H1" Grid.Row="0" Text="Project Name"></TextBlock>
+                        <TextBlock Classes="Subheading" Grid.Row="1" Text="Last Opened 01/01/01"></TextBlock>
+                        <TextBlock Classes="Subheading" Grid.Row="2" Text="Stride Version 4.3"></TextBlock>
+                        
+                        <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto,*,auto">
+                            <Button Grid.Column="0" Classes="WidgetButton" Content="&#xE4A8;"></Button>
+                            <Button Grid.Column="1" Classes="WidgetButton" Content="&#xEB46;"></Button>
+                            <ToggleButton Grid.Column="3" Classes="WidgetButton" Content="&#xE0EA;"></ToggleButton>
+                        </Grid>
+                        
+                    </Grid>
+                </Button>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

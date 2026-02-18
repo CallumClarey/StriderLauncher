@@ -54,6 +54,10 @@
       <AvaloniaResource Include="Assets\Fonts\Tomorrow-Thin.ttf" />
       <None Remove="Assets\Fonts\Tomorrow-Light.ttf" />
       <AvaloniaResource Include="Assets\Fonts\Tomorrow-Light.ttf" />
+      <None Remove="Assets\Fonts\Phosphor-Fill.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Phosphor-Fill.ttf" />
+      <None Remove="Assets\Fonts\Tomorrow-ThinItalic.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\Tomorrow-ThinItalic.ttf" />
     </ItemGroup>
 
     <ItemGroup>
@@ -67,6 +71,10 @@
     <ItemGroup>
       <Compile Update="Views\MainView.axaml.cs">
         <DependentUpon>MainView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Controls\NewsListItem.axaml.cs">
+        <DependentUpon>NewsListItem.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
     </ItemGroup>

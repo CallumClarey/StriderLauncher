@@ -1,0 +1,46 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- All Text Styles-->
+    
+    <Style Selector="TextBlock.Title">
+        <Setter Property="LetterSpacing" Value="3"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontMedium}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource DefaultFontColour}"></Setter>
+        <Setter Property="FontSize" Value="42"></Setter>
+        <Setter Property="FontWeight" Value="Light"></Setter>
+        <Setter Property="FontStyle" Value="Normal"></Setter>
+    </Style>
+    
+    
+    <Style Selector="TextBlock.Subheading">
+        <Setter Property="Foreground" Value="{DynamicResource DefaultFontColour}"></Setter>
+        <Setter Property="LetterSpacing" Value="2"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontThinItalic}"></Setter>
+        <Setter Property="FontSize" Value="15"></Setter>
+        <Setter Property="Margin" Value="5,0,5,5"></Setter>
+    </Style>
+    
+    
+    <Style Selector="TextBlock.H1">
+        <Setter Property="Foreground" Value="{DynamicResource DefaultFontColour}"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontMedium}"></Setter>
+        <Setter Property="FontSize" Value="22"></Setter>
+        <Setter Property="FontStyle" Value="Italic"></Setter>
+        <Setter Property="Padding" Value="5,0,0,0"></Setter>
+    </Style>
+    
+    
+    <Style Selector="TextBlock.H2">
+        <Setter Property="Foreground" Value="{DynamicResource DefaultFontColour}"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontLight}"></Setter>
+        <Setter Property="FontSize" Value="24"></Setter>
+        <Setter Property="Padding" Value="22,0,0,0"></Setter>
+    </Style>
+    
+</Styles>

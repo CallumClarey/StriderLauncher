@@ -7,7 +7,7 @@
         x:Class="StriderLauncher.MainView"
         xmlns:vm="clr-namespace:StriderLauncher.ViewModels"
         x:DataType="vm:MainViewModel"
-        Background="{DynamicResource SidebarBackground}"
+        Background="{DynamicResource SecondaryBackground}"
         ExtendClientAreaChromeHints="NoChrome"
         ExtendClientAreaTitleBarHeightHint="40"
         ExtendClientAreaToDecorationsHint="True"
@@ -21,45 +21,45 @@
     <Grid RowDefinitions="35,*">
         
         <!-- This Section is for the custom window bar -->
-            <Border BorderBrush="{DynamicResource BorderColor }" BorderThickness="0,0,0,2">
+            <Border BorderBrush="{DynamicResource BorderColor }" BorderThickness="0,0,0,1">
                 
-                <Grid ColumnDefinitions ="*, Auto" Row="0" Background="{DynamicResource SidebarBackground}" 
+                <Grid ColumnDefinitions ="*, Auto" Row="0" Background="{DynamicResource SecondaryBackground}" 
                       PointerPressed="Titlebar_OnPointerPressed" >
                     
                     
                     <Menu Grid.Column="1" FontFamily="{DynamicResource IconFont}">
-                        <MenuItem Header="&#xE4E0;" ToolTip.Tip="Report an issue" 
+                        <MenuItem Header="&#xE4E0;" ToolTip.Tip="Report an issue" Classes="WindowControls"
                                   Command="{Binding OpenLinkCommand}"
                                   CommandParameter="{DynamicResource ReportUrl}">
                         </MenuItem>
-                        <MenuItem Header="&#xE31A;" ToolTip.Tip="Roadmap" 
+                        <MenuItem Header="&#xE31A;" ToolTip.Tip="Roadmap"  Classes="WindowControls"
                                   Command="{Binding OpenLinkCommand}"
                                   CommandParameter="{DynamicResource RoadMapUrl}">
                         </MenuItem>
                         
-                        <MenuItem Header="&#xE8F2;" ToolTip.Tip="Documentation" 
+                        <MenuItem Header="&#xE8F2;" ToolTip.Tip="Documentation" Classes="WindowControls"
                                   Command="{Binding OpenLinkCommand}"
                                   CommandParameter="{Binding DocumentationUrl}">
                            
                         </MenuItem>
-                        <MenuItem Header="&#xE61A;" ToolTip.Tip="Chat On Discord"
+                        <MenuItem Header="&#xE61A;" ToolTip.Tip="Chat On Discord" Classes="WindowControls"
                                   Command="{Binding OpenLinkCommand}"
                                   CommandParameter="{DynamicResource DiscordUrl}">
                         </MenuItem>
-                        <MenuItem Header="&#xe576;" ToolTip.Tip="Github" 
+                        <MenuItem Header="&#xe576;" ToolTip.Tip="Github" Classes="WindowControls"
                                   Command="{Binding OpenLinkCommand}"
                                   CommandParameter="{DynamicResource GitHubUrl}">
                         </MenuItem>
-                        <MenuItem Header="&#xE59C;" ToolTip.Tip="Chat on Reddit" 
+                        <MenuItem Header="&#xE59C;" ToolTip.Tip="Chat on Reddit" Classes="WindowControls"
                                   Command="{Binding OpenLinkCommand}"
                                   CommandParameter="{DynamicResource RedditUrl}">
                         </MenuItem>
                         
                         <!--Window nav buttons-->
-                        <Separator Width="1" Height="20" Margin="5,0" Background="Gray"/>
-                        <MenuItem Header="—" Click="Minimize_OnClick"></MenuItem>
-                        <MenuItem x:Name="MaxBtn" Header= "□" Click="Maximumise_OnClick"></MenuItem>
-                        <MenuItem Classes="CloseItem" Header="X" Click="OnClosed_OnClick" Margin="2,0"></MenuItem>
+                        <Separator Width="1" Height="20" Margin="5,0" Background="{DynamicResource PrimaryForeground}"/>
+                        <MenuItem Header="—" Click="Minimize_OnClick" Classes="WindowControls"></MenuItem>
+                        <MenuItem x:Name="MaxBtn" Header="□" Click="Maximumise_OnClick" Classes="WindowControls"></MenuItem>
+                        <MenuItem Classes="WindowControls CloseItem" Header="X" Click="OnClosed_OnClick" Margin="2,0"></MenuItem>
                     </Menu>
                 
                 </Grid>
@@ -75,26 +75,26 @@
                 <!--Side Bar-->
                 <Border Grid.Column="0" 
                     Padding="0,8" 
-                    Background="{DynamicResource SidebarBackground}" 
+                    Background="{DynamicResource SecondaryBackground}" 
                     BorderBrush="{DynamicResource BorderColor}" 
-                    BorderThickness="0,0,3,0">
+                    BorderThickness="0,0,1,0">
                     
                     
                     <Grid RowDefinitions="*, Auto">
                         <StackPanel Spacing="0,1">
                             
-                            <Button Classes="Sidebar" Tag ="HomeButton" Command="{Binding GoToDashboardCommand}">
+                            <Button Classes="Sidebar" Command="{Binding GoToDashboardCommand}">
                                 <Label FontFamily="{DynamicResource StrideIcon}" Content="&#xE900;" FontSize="40"></Label>
                             </Button>
-                            <Button Classes="Sidebar" Tag= "ProjectButton" Command="{Binding GoToProjectCommand}">
+                            <Button Classes="Sidebar" Command="{Binding GoToProjectCommand}">
                                 <Label Content="&#xE260;" FontSize="35"></Label>
                             </Button>
-                            <Button Classes="Sidebar" Tag= "Installs" Command="{Binding GoToProjectCommand}">
-                                <Label Content="&#xE20A;" FontSize="35"></Label>
+                            <Button Classes="Sidebar" Command="{Binding GoToProjectCommand}">
+                                <Label Content="&#xE00E;" FontSize="35"></Label>
                             </Button>
                         </StackPanel>
                         
-                        <Button Grid.Row="1" Classes="Sidebar" Content="&#xE270;" FontSize="20" HorizontalAlignment="Center"></Button>
+                        <Button Grid.Row="1" Classes="Sidebar SecondaryButtons" Content="&#xE270;" FontSize="20" HorizontalAlignment="Center"></Button>
                     </Grid>
                 </Border> 
             </Grid>

@@ -12,14 +12,6 @@ public static class UrlOpener
 
     
     /// <summary>
-    /// Url for inserting 
-    /// </summary>
-    /// <param name="url"></param>
-    /// <param name="versionNumber"></param>
-    public static void OpenUrl(string url, string versionNumber) => OpenUrl(url.Replace("{0}", versionNumber));
-
-    
-    /// <summary>
     /// Takes the Url as an input then returns either true if opened false if not
     /// </summary>
     /// <param name="urlTarget"></param>

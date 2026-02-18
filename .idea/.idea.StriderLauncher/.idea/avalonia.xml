@@ -5,10 +5,17 @@
       <map>
         <entry key="StriderLauncher/App.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Assets/UrlDictionary.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Controls/CustomScrollBar.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Controls/IconButton.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Controls/NewsListItem.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Controls/RecentProjectsWidget.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Controls/ScrollPanel.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/MainWindow.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Styles/AppDefault.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Styles/AppDefaultStyles.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Styles/SidebarStyling.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Styles/TextStyles.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/TemplatedControls/NewsListItem.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Views/DashboardView.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Views/MainView.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Views/ProjectView.axaml" value="StriderLauncher/StriderLauncher.csproj" />

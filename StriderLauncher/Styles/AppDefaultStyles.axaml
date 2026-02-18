@@ -1,10 +1,11 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
-        <Border Padding="20">
+        <Border Padding="5" Background="Gray">
             <!-- Add Controls for Previewer Here -->
-            <Button Classes="IconOnly" Content="Hello"></Button>
-            
+            <ListBoxItem>
+                
+            </ListBoxItem>
         </Border>
     </Design.PreviewWith>
 
@@ -14,132 +15,162 @@
         <Setter Property="FontFamily" Value="{DynamicResource IconFont}"></Setter>
     </Style>
     
-    <Style Selector="Button.IconOnly">
-        <Setter Property="Background" Value="Transparent"></Setter>
-        <Setter Property="Foreground" Value="Transparent"></Setter>
-        <Setter Property="Padding" Value="12"></Setter>
-        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
-    </Style>
-    
-    <Style Selector="Button.IconOnly Image">
-        <Setter Property="RenderTransform" Value="scale(1)"></Setter>
-        <Setter Property="Transitions">
-            <Transitions>
-                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1"></TransformOperationsTransition>
-            </Transitions>
-        </Setter>
-    </Style>
-    
-    <Style Selector="Button.IconOnly:pointerover Image">
-        <Setter Property="RenderTransform" Value="scale(1.1)"></Setter>
-    </Style>
-    
-    <Style Selector="Button.IconOnly:pointerover /template/ ContentPresenter">
-        <Setter Property="Background" Value="Transparent"></Setter>
-    </Style>
-    
-    
-    <!--The font version-->
-    <Style Selector="Button.Sidebar">
-        <Setter Property="Background" Value="Transparent"></Setter>
-        <Setter Property="Foreground" Value="{DynamicResource SidebarForegroundDark}"></Setter>
-        <Setter Property="Padding" Value="12"></Setter>
-        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
-        <Setter Property="FontFamily" Value="{DynamicResource IconFont}"></Setter>
-    </Style>
-    
-    <Style Selector="Button.Sidebar">
-        <Setter Property="RenderTransform" Value="scale(1)"></Setter>
-        <Setter Property="Transitions">
-            <Transitions>
-                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1"></TransformOperationsTransition>
-            </Transitions>
-        </Setter>
-    </Style>
-    
-    <Style Selector="Button.Sidebar:pointerover">
-        <Setter Property="RenderTransform" Value="scale(1.15)"></Setter>
-    </Style>
-    
-    <Style Selector="Button.Sidebar:pointerover /template/ ContentPresenter">
-        <Setter Property="Background" Value="Transparent"></Setter>
-        <Setter Property="Foreground" Value="{DynamicResource SidebarForegroundDark}"></Setter>
-    </Style>
-    
-    <!--Font only icon-->
-    <Style Selector="Button.BasicIcon">
-        <Setter Property="Background" Value="Transparent"></Setter>
-        <Setter Property="Foreground" Value="{DynamicResource PageForeground}"></Setter>
-        <Setter Property="Padding" Value="12"></Setter>
-        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
-        <Setter Property="FontFamily" Value="{DynamicResource IconFont}"></Setter>
-    </Style>
-    
-    
-    <!--The Menu Button to close-->
-    <Style Selector="MenuItem.CloseItem:pointerover /template/ Border#PART_LayoutRoot">
-        <Setter Property="Background" Value="Red"/>
-    </Style>
-    
     <Style Selector="ToolTip">
-        <Setter Property="Foreground" Value="{DynamicResource DefaultFontDark }"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource DefaultFontColor }"></Setter>
         <Setter Property="Background" Value="{DynamicResource PrimaryBackground}"></Setter>
     </Style>
     
     
+    <!--Scroll Styling -->
+    <Style Selector="ScrollViewer">
+        <Style Selector="^ ScrollBar">
+            <Style Selector="^:vertical">
+                
+                <Setter Property="AllowAutoHide" Value="False"></Setter>
+                
+                <Style Selector="^/template/ Border#VerticalRoot">
+                    <Setter Property="Background" Value="Transparent"></Setter>
+                </Style>
+                
+                <Style Selector="^ /template/Rectangle#TrackRect">
+                    <Setter Property="Fill" Value="{DynamicResource PrimaryForeground}"></Setter>
+                    <Setter Property="Width" Value="2"></Setter>
+                    <Setter Property="Margin" Value="0,15,0,15"></Setter>
+                    <Setter Property="Opacity" Value="0.15"></Setter>
+                </Style>
+            </Style>
+            
+            <Style Selector="^ Thumb">
+                <Style Selector="^:pointerover /template/Border">
+                    <Setter Property="Background" Value="White"></Setter>
+                </Style>
+                
+                <Style Selector="^:pressed /template/Border">
+                    <Setter Property="Background" Value="White"></Setter>
+                </Style>
+                
+                <Setter Property="MinWidth" Value="25"></Setter>
+                <Setter Property="Template">
+                    <ControlTemplate>
+                        <Grid Margin="6">
+                            <Border Background="{DynamicResource BorderColor}" CornerRadius="8" Opacity="0.9"></Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter>
+            </Style>
+            
+            <Style Selector="^ RepeatButton">
+                <Setter Property="IsVisible" Value="False"></Setter>
+            </Style>
+            
+        </Style>
+    </Style>
+    
     
     <!--Dashboard styles-->
-   
-    
-    
-    <Style Selector="TextBlock.Title">
-        <Setter Property="LetterSpacing" Value="3"></Setter>
-        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontMedium}"></Setter>
-        <Setter Property="FontSize" Value="42"></Setter>
-        <Setter Property="FontWeight" Value="Light"></Setter>
-        <Setter Property="FontStyle" Value="Italic"></Setter>
-    </Style>
-    
-    <Style Selector="TextBlock.Subheading">
-        <Setter Property="LetterSpacing" Value="2"></Setter>
-        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontThin}"></Setter>
-        <Setter Property="FontSize" Value="15"></Setter>
-        <Setter Property="FontStyle" Value="Italic"></Setter>
-        <Setter Property="Margin" Value="5,0,5,5"></Setter>
-    </Style>
-    
-    <Style Selector="TextBlock.H1">
-        <Setter Property="FontFamily" Value="{DynamicResource DefaultFontLight}"></Setter>
-        <Setter Property="FontSize" Value="24"></Setter>
-        <Setter Property="Padding" Value="22,0,0,0"></Setter>
-    </Style>
     
     <Style Selector="Separator">
-        <Setter Property="Background" Value="{DynamicResource PageForeground}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource PrimaryForeground}"></Setter>
         <Setter Property="Margin" Value="10,10,10,10"></Setter>
     </Style>
+    
     
     <Style Selector="TabStripItem.DashboardItem">
         <Setter Property="FontFamily" Value="{DynamicResource DefaultFontLight}"></Setter>
         <Setter Property="FontSize" Value="16"></Setter>
-        <Setter Property="BorderBrush" Value="{DynamicResource PageForeground}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryForeground}"/>
         <Setter Property="BorderThickness" Value="1"></Setter>
         <Setter Property="CornerRadius" Value="3"></Setter>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="{DynamicResource PageForeground}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
         <Setter Property="MinHeight" Value="30"></Setter>
         <Setter Property="MinWidth" Value="80"></Setter>
         <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+        
+        <Style Selector="^:selected">
+            <Setter Property="Background" Value="{DynamicResource PrimaryForeground}"></Setter>
+            <Setter Property="Foreground" Value="{DynamicResource PrimaryBackground}"></Setter>
+        </Style>
+    
+        <Style Selector="^:pointerover /template/ Border#PART_LayoutRoot">
+            <Setter Property="Background" Value="{DynamicResource AccentColour}"></Setter>
+            <Setter Property="BorderBrush" Value="{DynamicResource AccentColour}"></Setter>
+        </Style>
+        
+        
     </Style>
     
-    <Style Selector="TabStripItem.DashboardItem:selected">
-        <Setter Property="Background" Value="{DynamicResource PageForeground}"></Setter>
-        <Setter Property="Foreground" Value="{DynamicResource PrimaryBackground}"></Setter>
+    
+    <!--News box/Getting Started Style-->
+    <Style Selector="ListBoxItem.Dashlist">
+        <Setter Property="Margin" Value="15,0,15,0"></Setter>
+        <Setter Property="Background" Value="{DynamicResource PrimaryBackground}"></Setter>
+        <Setter Property="BorderThickness" Value="0,0,0,2"></Setter>
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderColor}"></Setter>
+        <Setter Property="CornerRadius" Value="0"></Setter>
+        
+        <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="BorderBrush" Value="{DynamicResource AccentColour}"></Setter>
+            <Setter Property="Background" Value="{DynamicResource PrimaryBackground}"></Setter>
+        </Style>
+        
+        <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryForeground}"></Setter>
+            <Setter Property="Background" Value="{DynamicResource PrimaryForeground}"></Setter>
+            <Setter Property="Opacity" Value="0.3"></Setter>
+            
+            
+        </Style>
+        
     </Style>
     
-    <Style Selector="TabStripItem.DashboardItem:pointerover /template/ Border#PART_LayoutRoot">
-        <Setter Property="Background" Value="{DynamicResource PageButtonHover}"></Setter>
-        <Setter Property="BorderBrush" Value="{DynamicResource PageButtonHover}"></Setter>
+    <!--Recent projects buttons-->
+    <Style Selector="Button.ProjectWidget">
+        <Setter Property="Background" Value="{DynamicResource PrimaryBackground}"></Setter>
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderColor}"></Setter>
+        <Setter Property="BorderThickness" Value="3"></Setter>
+        <Setter Property="CornerRadius" Value="5"></Setter>
+        
+        
+        <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="BorderBrush" Value="{DynamicResource AccentColour}"></Setter>
+            <Setter Property="Background" Value="{DynamicResource PrimaryBackground}"></Setter>
+        </Style>
+        
+        <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryForeground}"></Setter>
+        </Style>
     </Style>
+    
+    <!--Widget button style-->
+    <Style Selector="Button.WidgetButton, ToggleButton.WidgetButton">
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="FontFamily" Value="{DynamicResource IconFont}"></Setter>
+        <Setter Property="FontSize" Value="18"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}"></Setter>
+        
+        <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Foreground" Value="{DynamicResource AccentColour}"></Setter>
+            <Setter Property="Background" Value="Transparent"></Setter>
+        </Style>
+        
+        <Style Selector="^Button">
+            <Style Selector=
+                   "^:pressed /template/ ContentPresenter#PART_ContentPresenter,
+               ^:selected /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Foreground" Value="{DynamicResource BorderColor}"></Setter>
+                <Setter Property="Background" Value="Transparent"></Setter>
+            </Style>
+        </Style>
+        
+        <Style Selector="^ToggleButton">
+            <Style Selector="^:checked /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="FontFamily" Value="{DynamicResource FillIconFont}" />
+            </Style>
+        </Style>
+        
+    </Style>
+    
     
 </Styles>

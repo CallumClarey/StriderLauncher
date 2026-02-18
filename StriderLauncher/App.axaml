@@ -14,6 +14,10 @@
     <Application.Styles>
         <FluentTheme />
         <StyleInclude Source="Styles/AppDefaultStyles.axaml"></StyleInclude>
+        <StyleInclude Source="Styles/SidebarWindowStyling.axaml"></StyleInclude>
+        <StyleInclude Source="Controls/NewsListItem.axaml"></StyleInclude>
+        <StyleInclude Source="Controls/RecentProjectsWidget.axaml"></StyleInclude>   
+        <StyleInclude Source="Styles/TextStyles.axaml"></StyleInclude>
     </Application.Styles>
              
              
@@ -29,25 +33,23 @@
         
         <x:String x:Key="Version">4.3</x:String>
         
-        <!--Dark Mode Colours-->
+        <!--Shared Colours-->
+        <SolidColorBrush x:Key="PrimaryForeground">White</SolidColorBrush>
         <SolidColorBrush x:Key="PrimaryBackground">#202022</SolidColorBrush>
-        <SolidColorBrush x:Key="SidebarBackground">#1D1E26</SolidColorBrush>
-        <SolidColorBrush x:Key="BorderColor">#363740</SolidColorBrush>
-        <SolidColorBrush x:Key="PrimaryActiveBackground">#363740</SolidColorBrush>
-        <SolidColorBrush x:Key="SidebarForegroundDark">#FC365B</SolidColorBrush>
-        <SolidColorBrush x:Key="DefaultFontDark">WhiteSmoke</SolidColorBrush>
-        
-        <!--Pages colour scheme dark-->
-        <SolidColorBrush x:Key="PageForeground">White</SolidColorBrush>
-        <SolidColorBrush x:Key="PageButtonBoarder">#303138</SolidColorBrush>
-        <SolidColorBrush x:Key="PageButtonHover">#FC365B</SolidColorBrush>
+        <SolidColorBrush x:Key="SecondaryBackground">#1D1E26</SolidColorBrush>
+        <SolidColorBrush x:Key="AccentColour">#FC365B</SolidColorBrush>
+        <SolidColorBrush x:Key="BorderColor">#303138</SolidColorBrush>
+        <SolidColorBrush x:Key="DefaultFontColour">White</SolidColorBrush>
         
         
+        <!--Fonts-->
         <FontFamily x:Key="DefaultFontRegular">Assets/Fonts/Tomorrow-Regular.ttf#Tomorrow</FontFamily>
         <FontFamily x:Key="DefaultFontThin">Assets/Fonts/Tomorrow-Thin.ttf#Tomorrow Thin</FontFamily>
+        <FontFamily x:Key="DefaultFontThinItalic">Assets/Fonts/Tomorrow-ThinItalic.ttf#Tomorrow Thin</FontFamily>
         <FontFamily x:Key="DefaultFontMedium">Assets/Fonts/Tomorrow-Medium.ttf#Tomorrow Medium</FontFamily>
         <FontFamily x:Key="DefaultFontLight">Assets/Fonts/Tomorrow-Light.ttf#Tomorrow Light</FontFamily>
         <FontFamily x:Key="IconFont"> Assets/Fonts/Phosphor.ttf#Phosphor</FontFamily>
+        <FontFamily x:Key="FillIconFont"> Assets/Fonts/Phosphor-Fill.ttf#Phosphor-Fill</FontFamily>
         <FontFamily x:Key="StrideIcon"> Assets/Fonts/StrideIcons.ttf#StrideIcons</FontFamily>
         
     </Application.Resources>

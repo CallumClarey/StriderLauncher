@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="700"
              xmlns:vm="clr-namespace:StriderLauncher.ViewModels"
+             xmlns:templatedControls="clr-namespace:StriderLauncher.TemplatedControls"
              x:DataType="vm:DashboardViewModel"
              x:Class="StriderLauncher.Views.DashboardView"
              Background="{DynamicResource PrimaryBackground}"
@@ -15,27 +16,22 @@
     <Grid RowDefinitions="Auto,20,*" Margin="10">
         <!--Titlebar-->
         <StackPanel>
-            <TextBlock Classes="Title" Text="Dashboard"></TextBlock>
+            <TextBlock Classes="Title" Text="Stride Dashboard"></TextBlock>
             <TextBlock Classes="Subheading" Text="Version 1.0"></TextBlock>
         </StackPanel>
         
         <!--Lower grid-->
-        <Grid Grid.Row="2" ColumnDefinitions="Auto,40,*">
+        <Grid Grid.Row="2" ColumnDefinitions="Auto,70,*">
             <StackPanel Grid.Column="0">
-                <TextBlock Classes="H1" Text="Recent Projects"></TextBlock>
+                <TextBlock Classes="H2" Text="Recent Projects"></TextBlock>
                 <Separator FlowDirection="LeftToRight"></Separator>
-            
-                <Button Width="300" Height="250">
-                    <Grid RowDefinitions="*,*,*">
-                        <Label Grid.Row="0" Content="Project 1"></Label>
-                        <Label Grid.Row="1" Content="Version 1.0"></Label>
-                        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button Classes="BasicIcon" Content="&#xE4A8;"></Button>
-                            <Button Classes="BasicIcon" Content="&#xEB46;"></Button>
-                            <Button Classes="BasicIcon" Content="&#xE0EA;"></Button>
-                        </StackPanel>
-                    </Grid>
-                </Button>
+                
+               <Grid RowDefinitions="*,20,*,20,*" Margin="10,10">
+                   <RecentProjectsWidget></RecentProjectsWidget>
+                   <RecentProjectsWidget Grid.Row="2"></RecentProjectsWidget>
+                   <RecentProjectsWidget Grid.Row="4"></RecentProjectsWidget>
+               </Grid>
+                
             </StackPanel>
             
             
@@ -52,22 +48,25 @@
                 <Separator></Separator>
                 
                 <!--List box for items-->
-                <ListBox HorizontalAlignment="Stretch">
-                    <ListBoxItem>
-                        <StackPanel>
-                            <Label Content="News"></Label>
-                            <Label Content="Date Posted: 14th November 2025"></Label>
+                <Border MaxHeight="700" Margin="20,10,40,30">
+                    <ScrollViewer>
+                        <StackPanel Spacing="10">
+                            <templatedControls:NewsListItem></templatedControls:NewsListItem>
+                            <templatedControls:NewsListItem></templatedControls:NewsListItem>
+                            <templatedControls:NewsListItem></templatedControls:NewsListItem>
+                            <templatedControls:NewsListItem></templatedControls:NewsListItem>
+                            <templatedControls:NewsListItem></templatedControls:NewsListItem>
+                            <templatedControls:NewsListItem></templatedControls:NewsListItem>
+                            <templatedControls:NewsListItem></templatedControls:NewsListItem>
+                            <templatedControls:NewsListItem></templatedControls:NewsListItem>
+                            <templatedControls:NewsListItem></templatedControls:NewsListItem>
+                            <templatedControls:NewsListItem></templatedControls:NewsListItem>
                         </StackPanel>
-                    </ListBoxItem>
-                    <ListBoxItem>
-                        <StackPanel>
-                            <Label Content="News"></Label>
-                            <Label Content="Date Posted: 14th November 2025"></Label>
-                        </StackPanel>
-                    </ListBoxItem>
-                
-                </ListBox>
+                    </ScrollViewer>
+                </Border>
             </StackPanel>
+            
+            
             </Grid>
         </Grid>
 </UserControl>
