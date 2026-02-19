@@ -1,4 +1,4 @@
-StriderLauncher
+<Title> StriderLauncher <Title>
 
 A contemporary project manager and launcher designed for Stride Game Engine And built using Avalonia UI with clean MVVM architecture.
 Strider Launcher is my own personal project that aims to rework Stride with a more modern UI and better usability with a maintainable architecture. 
