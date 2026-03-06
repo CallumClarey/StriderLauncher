@@ -14,6 +14,7 @@
         <entry key="StriderLauncher/Styles/AppDefault.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Styles/AppDefaultStyles.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Styles/SidebarStyling.axaml" value="StriderLauncher/StriderLauncher.csproj" />
+        <entry key="StriderLauncher/Styles/SidebarWindowStyling.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Styles/TextStyles.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/TemplatedControls/NewsListItem.axaml" value="StriderLauncher/StriderLauncher.csproj" />
         <entry key="StriderLauncher/Views/DashboardView.axaml" value="StriderLauncher/StriderLauncher.csproj" />

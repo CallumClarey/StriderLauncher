@@ -97,6 +97,10 @@
             <Setter Property="BorderBrush" Value="{DynamicResource AccentColour}"></Setter>
         </Style>
         
+        <Style Selector="^:selected:pointerover /template/ Border#PART_LayoutRoot">
+            <Setter Property="Background" Value="{DynamicResource PrimaryForeground}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource PrimaryForeground}"/>
+        </Style>
         
     </Style>
     
@@ -116,10 +120,6 @@
         
         <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="BorderBrush" Value="{DynamicResource PrimaryForeground}"></Setter>
-            <Setter Property="Background" Value="{DynamicResource PrimaryForeground}"></Setter>
-            <Setter Property="Opacity" Value="0.3"></Setter>
-            
-            
         </Style>
         
     </Style>
